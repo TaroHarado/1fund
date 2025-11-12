@@ -1,0 +1,52 @@
+{
+  "rewrites": [
+    {
+      "source": "/_next/image",
+      "destination": "/api/image-rewrite"
+    },
+    {
+      "source": "/api-docs",
+      "destination": "/api-docs.html"
+    },
+    {
+      "source": "/charts",
+      "destination": "/charts.html"
+    },
+    {
+      "source": "/backtester",
+      "destination": "/backtester.html"
+    },
+    {
+      "source": "/funding/historical",
+      "destination": "/funding/historical.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/_next/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "functions": {
+    "api/image-rewrite.js": {
+      "maxDuration": 10
+    }
+  }
+}
+
