@@ -1,0 +1,7 @@
+# Netlify/Vercel redirects for Next.js static export
+/api-docs /api-docs.html 200
+/charts /charts.html 200
+/backtester /backtester.html 200
+/funding/historical /funding/historical.html 200
+/* /index.html 200
+

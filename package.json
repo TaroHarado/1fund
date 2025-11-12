@@ -1,0 +1,14 @@
+{
+  "name": "1fund-fun-static",
+  "version": "1.0.0",
+  "description": "Static server for 1fund.fun",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+

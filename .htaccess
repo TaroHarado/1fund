@@ -1,0 +1,32 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Handle Next.js static export routes
+# If the requested file exists, serve it
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Route /api-docs to api-docs.html
+RewriteRule ^api-docs/?$ api-docs.html [L]
+
+# Route /charts to charts.html
+RewriteRule ^charts/?$ charts.html [L]
+
+# Route /backtester to backtester.html
+RewriteRule ^backtester/?$ backtester.html [L]
+
+# Route /funding/historical to funding/historical.html
+RewriteRule ^funding/historical/?$ funding/historical.html [L]
+
+# Route root to index.html
+RewriteRule ^$ index.html [L]
+
+# Handle all other routes - try to find matching .html file
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# If no matching file, serve index.html (for client-side routing)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+

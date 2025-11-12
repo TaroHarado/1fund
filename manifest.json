@@ -1,0 +1,55 @@
+{
+    "name": "1fund.fun",
+    "short_name": "1fund",
+    "description": "Crypto Funding Rates Arbitrage Screener across 24+ CEX and DEX exchanges. Real-time market data and arbitrage opportunities.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f0f0f",
+    "theme_color": "#0f0f0f",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "/logo-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/logo-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/logo-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["finance", "productivity", "utilities"],
+    "shortcuts": [
+        {
+            "name": "Funding Rates",
+            "short_name": "Funding",
+            "description": "View current funding rates",
+            "url": "/",
+            "icons": [{ "src": "/logo-192x192.png", "sizes": "192x192" }]
+        },
+        {
+            "name": "Historical Data",
+            "short_name": "History",
+            "description": "View historical funding rates",
+            "url": "/funding/historical",
+            "icons": [{ "src": "/logo-192x192.png", "sizes": "192x192" }]
+        },
+        {
+            "name": "Charts",
+            "short_name": "Charts",
+            "description": "View funding rate charts",
+            "url": "/charts",
+            "icons": [{ "src": "/logo-192x192.png", "sizes": "192x192" }]
+        }
+    ]
+}
+
